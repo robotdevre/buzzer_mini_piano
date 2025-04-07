@@ -18,6 +18,10 @@ const int tones[9] = {
 };
 
 void setup() {
+  Serial.begin(9600);
+  delay(100); // Bazı durumlarda gerekli
+  Serial.println("GITHUB TEST");
+  
   // Buton pinlerini INPUT_PULLUP yapıyoruz
   for (int i = 0; i < 9; i++) {
     pinMode(buttonPins[i], INPUT_PULLUP);
