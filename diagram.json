@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "author": "Robot Devre",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 106.2, "left": -39, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -67.3,
+      "left": -140.5,
+      "rotate": 90,
+      "attrs": { "color": "red", "xray": "1", "bounce": "1", "key": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -67.3,
+      "left": -82.9,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1", "key": "2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": -67.3,
+      "left": -25.3,
+      "rotate": 90,
+      "attrs": { "color": "blue", "xray": "1", "key": "3" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": -67.3,
+      "left": 32.3,
+      "rotate": 90,
+      "attrs": { "color": "yellow", "xray": "1", "key": "4" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": -67.3,
+      "left": 89.9,
+      "rotate": 90,
+      "attrs": { "color": "red", "xray": "1", "key": "5" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn6",
+      "top": -67.3,
+      "left": 147.5,
+      "rotate": 90,
+      "attrs": { "color": "white", "xray": "1", "key": "6" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn7",
+      "top": -67.3,
+      "left": 205.1,
+      "rotate": 90,
+      "attrs": { "color": "grey", "xray": "1", "key": "7" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn8",
+      "top": -67.3,
+      "left": 262.7,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1", "key": "8" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 112.5,
+      "left": 282.9,
+      "rotate": 90,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn9",
+      "top": -67.3,
+      "left": 320.3,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1", "key": "9" }
+    }
+  ],
+  "connections": [
+    [ "btn1:1.r", "uno:12", "red", [ "v86.6", "h192" ] ],
+    [ "btn2:1.r", "uno:11", "green", [ "v77", "h144" ] ],
+    [ "btn3:1.r", "uno:10", "blue", [ "v67.4", "h96" ] ],
+    [ "btn4:1.r", "uno:9", "gold", [ "v57.8", "h48" ] ],
+    [ "btn6:1.r", "uno:7", "white", [ "v57.8", "h-28.8" ] ],
+    [ "btn7:1.r", "uno:6", "gray", [ "v67.4", "h-86.4" ] ],
+    [ "btn8:1.r", "uno:5", "green", [ "v77", "h-134.4" ] ],
+    [ "btn1:2.r", "uno:GND.1", "black", [ "v105.8", "h191.8" ] ],
+    [ "btn2:2.r", "uno:GND.1", "black", [ "v105.8", "h134.2" ] ],
+    [ "btn3:2.r", "uno:GND.1", "black", [ "v105.8", "h76.6" ] ],
+    [ "btn4:2.r", "uno:GND.1", "black", [ "v105.8", "h19" ] ],
+    [ "btn5:1.r", "uno:8", "red", [ "v0" ] ],
+    [ "btn5:2.r", "uno:GND.1", "black", [ "v105.8", "h-38.6" ] ],
+    [ "btn6:2.r", "uno:GND.1", "black", [ "v105.8", "h-57.8" ] ],
+    [ "btn7:2.r", "uno:GND.1", "black", [ "v105.8", "h-153.8" ] ],
+    [ "btn8:2.r", "uno:GND.1", "black", [ "v105.8", "h-211.4" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "h0", "v-48", "h-201.6" ] ],
+    [ "btn9:2.r", "uno:GND.1", "black", [ "v105.8", "h-269" ] ],
+    [ "bz1:2", "uno:3", "green", [ "h-19.2", "v-48.4", "h-19.2" ] ],
+    [ "btn9:1.r", "uno:4", "green", [ "v77", "h9.6" ] ]
+  ],
+  "dependencies": {}
+}
