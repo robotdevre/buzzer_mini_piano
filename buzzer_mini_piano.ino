@@ -1,4 +1,4 @@
-// Her bir butonun bağlı olduğu pinleri tanımlıyoruz 
+// Her bir butonun bağlı olduğu pinleri tanımlıyoruz  
 const int buttonPins[9] = {12, 11, 10, 9, 8, 7, 6, 5, 4}; // 4 son butonun pini
 
 // Buzzer'ın bağlı olduğu pin
