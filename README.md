@@ -48,21 +48,38 @@ const int tones[9] = {
   440, // La
   494, // Si
   523, // Do (üst)
-  587  // Re (üst)
+  587  // Re (üst) — yeni eklenen butonun tonu
 };
 
 void setup() {
+  // Buton pinlerini INPUT_PULLUP yapıyoruz
   for (int i = 0; i < 9; i++) {
     pinMode(buttonPins[i], INPUT_PULLUP);
   }
+
+  // Buzzer çıkış pini
   pinMode(buzzerPin, OUTPUT);
 }
 
 void loop() {
   bool played = false;
 
+  // Butonları sırayla kontrol ediyoruz
   for (int i = 0; i < 9; i++) {
-    if (digitalRead
+    // Butona basıldığında pin LOW olur (çünkü pull-up kullanıyoruz)
+    if (digitalRead(buttonPins[i]) == LOW) {
+      tone(buzzerPin, tones[i]);
+      played = true;
+      break; // İlk basılan tuşun sesini çal ve döngüden çık
+    }
+  }
+
+  // Hiçbir tuşa basılmamışsa buzzeri sustur
+  if (!played) {
+    noTone(buzzerPin);
+  }
+}
+
 ``` 
 ---
 
